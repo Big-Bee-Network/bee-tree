@@ -26,16 +26,16 @@ mytree
 
 
 ###root with apoid wasp outgroups
-outgroups <- c("Philanthus","Pulverro","Bembix","Tachysphex","Cerceris")
-workingtree=root(mytree,outgroup=outgroups, resolve.root = TRUE)
-workingtree=as.phylo(mytree)
+#outgroups <- c("Philanthus","Pulverro","Bembix","Tachysphex","Cerceris")
+#workingtree=root(mytree,outgroup=outgroups, resolve.root = TRUE)
+#workingtree=as.phylo(mytree)
 
 ##Make ultrametric
-workingtree=chronos(workingtree, lambda = 0.001, control = chronos.control(maxit = 10000000, eval.max = 100000000))
-is.ultrametric(workingtree)
+#workingtree=chronos(workingtree, lambda = 0.001, control = chronos.control(maxit = 10000000, eval.max = 100000000))
+#is.ultrametric(workingtree)
 
 #remove outgroups unless you have morphometric data for them
-keep = c("Osmia","Hesperapis", 'Bombus',"Andrena","Melitta","Perdita",'Colletes','Megachile','Lasioglossum',"Philanthus","Pulverro","Bembix","Tachysphex","Cerceris")
+keep = c("Osmia","Hesperapis", 'Bombus',"Andrena","Melitta","Perdita",'Colletes','Megachile','Lasioglossum')
 rm_genera = workingtree$tip.label[!workingtree$tip.label %in% keep]
 trimmed_tree = drop.tip(workingtree,rm_genera)
 
