@@ -34,6 +34,7 @@ workingtree=as.phylo(mytree)
 workingtree=chronos(workingtree, lambda = 0.001, control = chronos.control(maxit = 10000000, eval.max = 100000000))
 is.ultrametric(workingtree)
 
+#remove outgroups unless you have morphometric data for them
 keep = c("Osmia","Hesperapis", 'Bombus',"Andrena","Melitta","Perdita",'Colletes','Megachile','Lasioglossum',"Philanthus","Pulverro","Bembix","Tachysphex","Cerceris")
 rm_genera = workingtree$tip.label[!workingtree$tip.label %in% keep]
 trimmed_tree = drop.tip(workingtree,rm_genera)
