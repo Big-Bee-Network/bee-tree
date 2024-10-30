@@ -3,9 +3,6 @@ library(tidyverse)
 library("ape")
 library("phytools")
 library('picante')
-#library(adephylo)
-#library(dendextend)
-#library(Quartet)
 
 
 #### Read in genus phylogenetic tree from Henriquez Piskulich, Patricia Andrea; Hugall, Andrew F.; Stuart-Fox, Devi (2023). A supermatrix phylogeny of the world’s bees (Hymenoptera: Anthophila) [Dataset]. Dryad. https://doi.org/10.5061/dryad.80gb5mkw1
